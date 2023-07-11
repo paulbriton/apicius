@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-11 11:50+0200\n"
+"PO-Revision-Date: 2023-07-11 11:03+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: apicius/models.py:7 apicius/models.py:17 apicius/models.py:28
+msgid "name"
+msgstr "name"
+
+#: apicius/models.py:10 apicius/models.py:45
+msgid "recipe_type"
+msgstr "recipe type"
+
+#: apicius/models.py:20
+msgid "ingredient"
+msgstr "ingredient"
+
+#: apicius/models.py:31
+msgid "cooking_time"
+msgstr "cooking time"
+
+#: apicius/models.py:32 apicius/models.py:55
+msgid "cooking_times"
+msgstr "cooking times"
+
+#: apicius/models.py:39
+msgid "title"
+msgstr "title"
+
+#: apicius/models.py:40
+msgid "serving"
+msgstr "serving"
+
+#: apicius/models.py:41
+msgid "serving_unit"
+msgstr "serving unit"
+
+#: apicius/models.py:42
+msgid "is_private"
+msgstr "is private"
+
+#: apicius/models.py:43
+msgid "note"
+msgstr "note"
+
+#: apicius/models.py:47
+msgid "author"
+msgstr "author"
+
+#: apicius/models.py:50
+msgid "ingredients"
+msgstr "ingredients"
+
+#: apicius/models.py:57
+msgid "favorites"
+msgstr "favorites"
+
+#: apicius/models.py:60
+msgid "recipe"
+msgstr "recipe"
+
+#: apicius/models.py:68
+msgid "unit"
+msgstr "unit"
+
+#: apicius/models.py:69 apicius/models.py:94
+msgid "description"
+msgstr "description"
+
+#: apicius/models.py:70
+msgid "quantity"
+msgstr "quantity"
+
+#: apicius/models.py:76
+msgid "recipe_ingredient"
+msgstr "recipe ingredient"
+
+#: apicius/models.py:80
+msgid "minute"
+msgstr "minute"
+
+#: apicius/models.py:81
+msgid "hour"
+msgstr "hour"
+
+#: apicius/models.py:87
+msgid "recipe_cooking_time"
+msgstr "recipe cooking time"
+
+#: apicius/models.py:95
+msgid "order"
+msgstr "order"
+
+#: apicius/models.py:100
+msgid "step"
+msgstr "step"
+
+#: apicius/models.py:108
+msgid "rating"
+msgstr "rating"
+
+#: apicius/models.py:109
+msgid "comment"
+msgstr "comment"
+
+#: apicius/models.py:115
+msgid "user_review"
+msgstr "user review"
+
+#: config/settings.py:137
+msgid "French"
+msgstr "French"
+
+#: config/settings.py:138
+msgid "English"
+msgstr "English"
