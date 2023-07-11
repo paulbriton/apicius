@@ -125,18 +125,20 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = "en"
+LANGUAGE_CODE = "fr"
+
+# Set first language according to LANGUAGE_CODE
+# First language is treated as the default language by django-modeltranslation
+LANGUAGES = (
+    ("fr", _("French")),
+    ("en", _("English")),
+)
 
 TIME_ZONE = "UTC"
 
 USE_I18N = True
 
 USE_TZ = True
-
-LANGUAGES = (
-    ("fr", _("French")),
-    ("en", _("English")),
-)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
