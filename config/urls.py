@@ -21,6 +21,6 @@ from django.urls import path, include
 urlpatterns = i18n_patterns(
     path("admin/", admin.site.urls),
     path("accounts/", include("authuser.urls")),
-    path("", include("apicius.urls")),
+    path("", include("apicius.urls"), name="index"),
     prefix_default_language=False,
 )

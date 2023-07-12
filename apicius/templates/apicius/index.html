@@ -19,4 +19,18 @@
             </div>
         </div>
     </div>
+    <div class="min-h-screen bg-gray-400 flex flex-col justify-center">
+        <div class="relative py-3 sm:max-w-xl mx-auto">
+            <nav x-data="{ open: false }">
+                <button class="w-14 h-14 relative focus:outline-none bg-red-600 rounded" @click="open = !open">
+
+                    <div class="block w-5 absolute left-6 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                        <span  class="block absolute h-0.5 w-7 text-white bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                        <span  class="block absolute  h-0.5 w-5 text-white bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                        <span  class="block absolute  h-0.5 w-7 text-white bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+    </div>
 {% endblock content %}
