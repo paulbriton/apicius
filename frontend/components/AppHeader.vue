@@ -1,7 +1,7 @@
 <template>
   <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 shadow">
     <div class="flex flex-wrap items-center grow mx-auto p-4">
-      <a href="" class="flex items-center justify-center grow space-x-3 rtl:space-x-reverse">
+      <a href="" class="flex items-center grow space-x-3 rtl:space-x-reverse">
         <AppLogo />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Apicius</span>
       </a>
