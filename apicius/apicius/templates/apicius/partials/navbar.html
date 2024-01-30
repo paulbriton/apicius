@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <style>
     [x-cloak] {
         display: none !important;
@@ -8,7 +10,7 @@
     <nav class="shadow-lg sticky top-0 z-50 flex items-center justify-between  bg-orange-500 p-6">
         <div class="text-white flex">
             <div class="border-r-2 border-orange-400">
-                <div class="relative sm:max-w-xl mr-2">
+                <div class="sm:max-w-xl mr-2">
                     <nav x-data="{ openMenu: false }" @click.outside="openMenu = false">
                         <button class="text-gray-600 w-10 h-10 relative focus:outline-none" @click="openMenu = !openMenu">
                             <span class="sr-only">Open main menu</span>
@@ -19,31 +21,30 @@
                             </div>
                         </button>
                         <!-- Pop Out Navigation -->
-                        <nav class="fixed top-20 right-0 bottom-0 left-0 backdrop-blur-sm z-10 h-fit" :class="openMenu ? 'visible' : 'invisible' " x-cloak>
-
-                            <!-- UL Links -->
-                            <ul class="absolute top-0 right-0 bottom-0 h-fit left-0 bg-orange-400 drop-shadow-2xl z-10 transition-all"
-                                :class="openMenu ? 'translate-y-0' : 'translate-y-full'">
-
-                                <li class="border-b border-inherit">
-                                    <a href="#" class="block p-4" aria-current="true">Home</a>
-                                </li>
-                                <li class="border-b border-inherit">
+                        <nav class="fixed top-20 right-0 bottom-0 left-0 backdrop-blur-sm z-10 h-fit"
+                             :class="openMenu ? 'visible' : 'invisible' " x-cloak>
+                            <div class=" bg-orange-400 drop-shadow-2xl z-10 transition-all grid grid-cols-3"
+                                 :class="openMenu ? 'translate-y-0' : 'translate-y-full'">
+                                <div class="border-b border-inherit">
+                                    <p class="block p-4">{% translate "Recipe by category" %}</p>
+                                </div>
+                                <div class="border-b border-inherit">
                                     <a href="#" class="block p-4">About</a>
-                                </li>
-                                <li class="border-b border-inherit">
+                                </div>
+                                <div class="border-b border-inherit">
                                     <a href="#" class="block p-4">Articles</a>
-                                </li>
-                                <li class="border-b border-inherit">
-                                    <a href="#" class="block p-4">Contact</a>
-                                </li>
-                            </ul>
+                                </div>
+                                <div class="border-b border-inherit">
+                                    <a href="#" class="block p-4">Foo</a>
+                                </div>
+                                <div class="border-b border-inherit"></div>
+                            </div>
                         </nav>
                     </nav>
                 </div>
             </div>
             <div class="flex ml-3">
-                {% include 'apicius/logo.html' %}
+                {% include 'apicius/partials/logo.html' %}
                 <span class="font-semibold text-2xl tracking-tight"><a href="{% url 'index' %}">Apicius</a></span>
             </div>
         </div>

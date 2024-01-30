@@ -1,6 +1,6 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <title>{% block title %}Apicius{% endblock title %}</title>
         <meta charset="UTF-8">
@@ -12,10 +12,10 @@
 
     <body>
         <div class="mx-auto">
-            {% include 'apicius/navbar.html' %}
+            {% include 'apicius/partials/navbar.html' %}
             {% block content %}
             {% endblock %}
         </div>
-        {% include 'apicius/footer.html' %}
+        {% include 'apicius/partials/footer.html' %}
     </body>
 </html>
