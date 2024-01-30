@@ -52,12 +52,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "tailwind",
     "theme",
     "apicius",
     "crispy_forms",
     "crispy_tailwind",
     "authuser",
+    "graphene_django",
 ]
 
 MIDDLEWARE = [
@@ -163,3 +163,8 @@ CRISPY_TEMPLATE_PACK = "tailwind"
 AUTH_USER_MODEL = "authuser.User"
 
 # AUTH_USER_ALLOW_SIGNUP = True
+
+# Configure GraphQL
+GRAPHENE = {
+    "SCHEMA": "apicius.schema.schema",
+}
