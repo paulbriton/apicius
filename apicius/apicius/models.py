@@ -1,9 +1,20 @@
 from authuser.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django_lifecycle import LifecycleModel, hook
 
 
-class RecipeType(models.Model):
+class Base(models.Model):
+    slug = models.SlugField(_("slug"), null=False, unique=True)
+
+    created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
+    updated_at = models.DateTimeField(_("updated_at"), auto_now=True)
+
+    class Meta:
+        abstract = True
+
+
+class RecipeType(Base):
     name = models.CharField(_("name"), max_length=64)
 
     class Meta:
@@ -13,7 +24,7 @@ class RecipeType(models.Model):
         return self.name
 
 
-class Ingredient(models.Model):
+class Ingredient(Base):
     name = models.CharField(_("name"), max_length=255)
 
     class Meta:
@@ -23,7 +34,7 @@ class Ingredient(models.Model):
         return self.name
 
 
-class CookingTime(models.Model):
+class CookingTime(Base):
     name = models.CharField(_("name"), max_length=64)
 
     class Meta:
@@ -34,7 +45,7 @@ class CookingTime(models.Model):
         return self.name
 
 
-class Recipe(models.Model):
+class Recipe(Base):
     title = models.CharField(_("title"), max_length=255)
     serving = models.PositiveIntegerField(_("serving"))
     serving_unit = models.CharField(_("serving_unit"), max_length=64)
@@ -68,7 +79,7 @@ class Recipe(models.Model):
         return self.title
 
 
-class Author(User):
+class Author(User, Base):
     favorite_recipes = models.ManyToManyField(
         Recipe, blank=True, related_name="user_favorites", verbose_name=_("favorites")
     )

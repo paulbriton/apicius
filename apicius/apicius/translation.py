@@ -1,5 +1,6 @@
 from modeltranslation.translator import translator, TranslationOptions
 from .models import (
+    Base,
     RecipeType,
     Ingredient,
     CookingTime,
@@ -8,6 +9,11 @@ from .models import (
     Step,
     UserReview,
 )
+
+
+class BaseTranslationOption(TranslationOptions):
+    fields = ("slug",)
+    required_languages = ()
 
 
 class NameTranslationOptions(TranslationOptions):
@@ -37,6 +43,7 @@ class UserReviewTranslationOptions(TranslationOptions):
     fields = ("comment",)
 
 
+translator.register(Base, BaseTranslationOption)
 translator.register(RecipeType, NameTranslationOptions)
 translator.register(Ingredient, NameTranslationOptions)
 translator.register(CookingTime, NameTranslationOptions)
