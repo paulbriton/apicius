@@ -58,9 +58,11 @@ INSTALLED_APPS = [
     "crispy_tailwind",
     "authuser",
     "graphene_django",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
@@ -168,3 +170,9 @@ AUTH_USER_MODEL = "authuser.User"
 GRAPHENE = {
     "SCHEMA": "apicius.schema.schema",
 }
+
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    "http://localhost:3000",
+)  # Matches the port that Vue.js is using
