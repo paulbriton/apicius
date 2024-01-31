@@ -8,7 +8,7 @@ class AuthorObjectType(DjangoObjectType):
         model = models.Author
 
 
-class RecipeTypeObjectTYpe(DjangoObjectType):
+class RecipeTypeObjectType(DjangoObjectType):
     class Meta:
         model = models.RecipeType
 

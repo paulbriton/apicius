@@ -6,7 +6,7 @@ from apicius import types
 # The Query class
 class Query(graphene.ObjectType):
     all_recipes = graphene.List(types.RecipeObjectType)
-    all_recipe_types = graphene.List(types.RecipeTypeObjectTYpe)
+    all_recipe_types = graphene.List(types.RecipeTypeObjectType)
     all_ingredients = graphene.List(types.IngredientObjectType)
 
     def resolve_all_recipes(root, info):
