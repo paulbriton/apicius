@@ -6,8 +6,16 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     'nuxt-icon',
+    '@nuxtjs/apollo',
   ],
   colorMode: {
     classSuffix: ''
-  }
+  },
+  apollo: { 
+    clients: { 
+      default: { 
+        httpEndpoint: 'http://127.0.0.1:8000/graphql' 
+      } 
+    }, 
+  },
 })
